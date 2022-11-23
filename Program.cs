@@ -1,35 +1,32 @@
-﻿int k,n;
-k = Convert.ToInt32(Console.ReadLine());
-n = Convert.ToInt32(Console.ReadLine());
-int[] arr ={0,0,0,0,0,0,0,0,0,0};
-Console.WriteLine("Enter the array elements:");
-for(int i =0;i<n;i++)
+﻿
+Console.WriteLine("enter no of trains:");
+int a,b;
+int n = Convert.ToInt32(Console.ReadLine());
+int [] arr={0,0,0,0,0,0,0,0,0,0};
+int [] dep={0,0,0,0,0,0,0,0,0,0};
+for (int i=0;i<n;i++)
 {
-    int a = Convert.ToInt32(Console.ReadLine());
-    if(a<k)
-    {
-        a=a+2;
-    }
-    else
-    {
-        a=a-2;
-    }
+    a=Convert.ToInt32(Console.Read());
     arr[i]=a;
+     
+}
+Console.ReadLine();
+for (int i =0;i<n;i++)
+{
+    b=Convert.ToInt32(Console.Read());
+    dep[i]=b;
+}
+int co=0;
+
+for(int i=0;i<n-1;i++)
+{
+    
+        if(dep[i]>=arr[i+1])
+        {
+            co=co+1;
+        }
     
 }
+Console.WriteLine(co);
 
-int low = arr[0];
-int high = arr[0];
-for(int i =1;i<n;i++)
-{
-    if (low > arr[i])
-    {
-        low = arr[i];
-    }
-    if (high < arr[i])
-    {
-        high = arr[i];
-    }
-}
-Console.WriteLine(high-low);
 
