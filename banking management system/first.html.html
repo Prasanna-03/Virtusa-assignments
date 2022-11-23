@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    
+</head>
+<body >
+    <div class="header">
+        <h1>Account Management System</h1>
+        <div class="side-nav">
+            <ul class="nav-links" >
+                <li onclick="getPageContent('createacc')"><a href="#"><p>Create Account</p></a></li>
+                <li onclick="getPageContent('deleteacc')"><a href="#"><p>Delete Account</p></a></li>
+                <li onclick="getPageContent('updateacc')"><a href="#"><p>Update Account</p></a></li>
+                <li onclick="getPageContent('allacc')"><a href="#"><p>Get All Account Details</p></a></li>
+                <li onclick="getPageContent('singleacc')"><a href="#"><p>Get Single Account Details</p></a></li>
+                <li onclick="getPageContent('deposit')"><a href="#"><p>Deposit Amount</p></a></li>
+                <li onclick="getPageContent('withdraw')"><a href="#"><p>Withdraw Amount</p></a></li>
+                <li onclick="getPageContent('transfer')"><a href="#"><p>Trasfer Funds</p></a></li>
+                <li onclick="getPageContent('statements')"><a href="#"><p>Statement</p></a></li>
+                <div class="active"></div>
+            </ul>
+        </div>
+        <div class="rightsection" >
+            <div id="content">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
